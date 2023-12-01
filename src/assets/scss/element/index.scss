@@ -1,0 +1,222 @@
+// https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  // do not use same name, it will override.
+  $colors:
+    (
+      'primary': (
+        'base': #262c31
+      ),
+      'success': (
+        'base': #67c23a
+      ),
+      'warning': (
+        'base': #e6a23c
+      ),
+      'danger': (
+        'base': #f56c6c
+      ),
+      'error': (
+        'base': #f56c6c
+      ),
+      'info': (
+        'base': #909399
+      )
+    ),
+  $fill-color: (
+    '': #f0f2f5,
+    'light': #f9f9f9, //#f5f7fa
+    'lighter': #fafafa,
+    'extra-light': #fafcff,
+    'dark': #ebedf0,
+    'darker': #e6e8eb,
+    'blank': #ffffff
+  ),
+  $border-color: (
+    '': #dcdfe6,
+    'light': #e4e7ed,
+    'lighter': #e1e2e4, //ebeef5
+    'extra-light': #f2f6fc,
+    'dark': #d4d7de,
+    'darker': #cdd0d6
+  ),
+  $common-component-size: (
+    'large': 36px, 
+    'default': 32px, 
+    'small': 26px
+  ),
+  $button: (
+    'border-color': var(--el-color-info-light-5),
+  ),
+  $button-padding-horizontal: (
+    'large': 13px, 
+    'default': 10px, 
+    'small': 8px
+  ),
+  $checkbox: (
+    'input-height': 16px, 
+    'input-width': 16px,
+    'checked-text-color': var(--el-text-color-regular),
+  ),
+  $radio: (
+    'input-height': 16px, 
+    'input-width': 16px
+  ),
+  $radio-checked: (
+    'text-color': var(--el-text-color-regular),
+    'icon-color': var(--el-color-white)
+  ),
+  $table: (
+    // 'header-text-color': var(--el-text-color-primary),
+    // 'header-bg-color': var(--el-fill-color-light),
+    'header-text-color': var(--el-color-white),
+    'header-bg-color': var(--el-color-primary),
+  ),
+  $menu: (
+    'base-level-padding': 32px,
+    // 'bg-color': var(--el-color-info-dark-2),
+  ),
+  $dialog: (
+    'title-font-size': var(--el-font-size-extra-large), 
+    'padding-primary': 24px
+  )
+);
+@use 'element-plus/theme-chalk/src/index.scss' as *;
+
+// button
+.el-button--large {
+  min-width: 66px;
+}
+.el-button + .el-button {
+  margin-left: 6px;
+}
+.el-button.is-plain {
+  --el-button-hover-text-color: var(--el-button-text-color);
+  --el-button-hover-bg-color: var(--el-button-bg-color);
+  --el-button-hover-border-color: var(--el-button-text-color);
+  --el-button-active-text-color: var(--el-button-hover-text-color);
+  --el-button-active-bg-color: var(--el-button-bg-color);
+  --el-button-active-border-color: var(--el-button-hover-text-color);
+}
+// input
+.el-input:not(.el-input--suffix) .el-input__wrapper:has(input[readonly]) {
+  background-color: var(--el-disabled-bg-color);
+}
+// checkbox
+.el-checkbox__inner::after {
+  width: 5px;
+  height: 8px;
+}
+.el-checkbox__inner::before {
+  top: 6px;
+}
+.el-checkbox.el-checkbox--large .el-checkbox__inner {
+  width: 16px;
+  height: 16px;
+}
+.el-checkbox__input.is-indeterminate .el-checkbox__inner::before {
+  top: 6px;
+}
+// radio
+.el-radio__inner::after {
+  width: 10px;
+  height: 10px;
+  background-color: var(--el-color-primary);
+}
+.el-radio.is-bordered {
+  margin-right: 6px;
+  background-color: var(--el-color-white);
+}
+// switch
+.el-switch .el-switch__core .el-switch__inner>span {
+  min-width: 25px;
+  text-align: center;
+}
+.el-switch__core .el-switch__action {
+  transform: scale(.9);
+}
+// select-dropdown
+.el-select-dropdown__empty {
+  --el-select-font-size: 1rem;
+}
+// form
+.el-form {
+  .el-input:not(.el-input--suffix) {
+    width: 200px;
+  }
+  .el-select {
+    width: 200px;
+  }
+  .el-range-editor.el-input__wrapper {
+    max-width: 350px;
+  }
+}
+.el-form-item__label {
+  color: var(--el-text-color-primary);
+  font-weight: 500;
+}
+// table
+.el-table .ascending.ascending {
+  border-bottom-color: rgba(255,255,255,.2);
+}
+.el-table .ascending .sort-caret.ascending {
+  border-bottom-color: var(--el-color-white);
+}
+.el-table .descending.descending {
+  border-top-color: rgba(255,255,255,.2);
+}
+.el-table .descending .sort-caret.descending {
+  border-top-color: var(--el-color-white);
+}
+.el-table th.el-table__cell > .cell {
+  position: relative;
+  .caret-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -7px;
+  }
+}
+.el-table .el-table__cell:first-child .el-radio {
+  width: auto;
+  height: unset;
+  .el-radio__label {
+    display: none;
+  }
+}
+.el-table__body tr.current-row > td.el-table__cell {
+  background-color: var(--el-table-current-row-bg-color) !important;
+}
+// .el-table--border .el-table__inner-wrapper::after {
+//   background-color: var(--el-color-info-dark-2);
+// }
+// pagination
+.el-pagination {
+  position: relative;
+  margin-top: 16px;
+  justify-content: center;
+}
+.el-pagination__sizes {
+  position: absolute;
+  left: 0;
+}
+// dialog
+.el-dialog {
+  border-radius: 8px;
+  box-shadow: 0px 4px 40px 0px rgba(0,0,0,.12);
+}
+.el-dialog__header {
+  margin-right: 0;
+  padding: 18px 24px 14px;
+  border-bottom: 1px solid var(--el-border-color);
+}
+.el-dialog__body {
+  padding: var(--el-dialog-padding-primary);
+  &>:first-child,
+  &>form:first-child>:first-child {
+    margin-top: 0 !important;
+  }
+}
+// message box
+.el-message-box__btns button:nth-child(2) {
+  margin-left: 6px;
+}

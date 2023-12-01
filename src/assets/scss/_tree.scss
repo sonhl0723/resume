@@ -1,0 +1,105 @@
+// tree
+$tree-node-height: 32px;
+.tree-list {
+  position: relative;
+  .tree-node {
+    &>.tree-node__child {
+      display: none;
+    }
+    &>.tree-node__value.is-open + .tree-node__child {
+      display: block;
+    }
+    // &>.tree-node__value .tree-sel.is-checked::after {
+    //   background:var(--el-color-primary-light-9);
+    // }
+    // &:has(.tree-sel.is-checked) > .tree-node__value .tree-tog:not(:disabled) {
+    //   background-color: var(--el-color-primary);
+    // }
+  }
+  .tree-tog {
+    appearance: none;
+    flex: 0 0 auto;
+    position: relative;
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+    border: 1px solid var(--el-color-info-light-5);
+    background: var(--el-fill-color-light);
+    box-sizing: content-box;
+    z-index: 1;
+    cursor: pointer;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 2px;
+      width: 7px;
+      height: 1px;
+      border-radius: 1px;
+      background: var(--el-color-info);
+    }
+    &::after {
+      transform: rotate(90deg);
+    }
+    &:checked {
+      &::after {
+        display: none;
+      }
+    }
+    &:disabled {
+      cursor: default;
+      background-color: var(--el-text-color-disabled);
+    }
+  }
+  .tree-node__value {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    height: $tree-node-height;
+    padding-left: 25px;
+    &:only-child {
+      padding-left: 0;
+    }
+    .tree-tog {
+      margin: 0 0 0 -25px;
+    }
+    .tree-sel{
+      position: static;
+      z-index: 0;
+      &::after {
+        content:'';
+        position: absolute;
+        left: -10px;
+        right: -10px;
+        height: $tree-node-height;
+        z-index: -1;
+      }
+      &:hover::after{
+        background-color: var(--el-fill-color-light);
+      }
+    }
+    .el-radio__inner {
+      display: none;
+    }
+    .el-radio__label {
+      padding-left: 0;
+    }
+  }
+  .tree-node__child {
+    padding-bottom: 10px;
+    .tree-node {
+      padding-left: 25px;
+    }
+    .tree-sel {
+      &:before {
+        content: '';
+        flex: 0 0 auto;
+        width: 6px;
+        height: 7px;
+        margin: 0 10px 4px 7px;
+        border: solid var(--el-color-info);
+        border-width: 0 0 1px 1px;
+      }
+    }
+  }
+}
