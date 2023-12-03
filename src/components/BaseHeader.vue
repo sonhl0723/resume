@@ -1,13 +1,29 @@
 <template>
-  <header class="header">
-    <nav class="header__nav">
-      <el-button>menu1</el-button>
-      <el-button>menu2</el-button>
-    </nav>
-  </header>
+  <el-menu
+  :default-active="activeIndex"
+  mode="horizontal"
+  :ellipsis="false"
+  @select="handleSelect"
+  >
+  <el-menu-item index="resume">
+    Resume
+  </el-menu-item>
+  <el-menu-item index="projects">
+    Projects
+  </el-menu-item>
+  </el-menu>
 </template>
 
 <script setup>
-</script>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
-<stype lang="scss" scoped></stype>
+const activeIndex = ref('resume')
+const router = useRouter()
+
+const handleSelect = (path) => {
+  router.push({
+    name: path
+  })
+}
+</script>
