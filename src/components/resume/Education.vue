@@ -1,6 +1,11 @@
 <template>
-  <a>Education</a>
+  <div
+    :style="{
+      boxShadow: `--el-box-shadow-dark`,
+    }"
+  />
 </template>
   
-  <script setup>
-  </script>
+<script setup>
+import { CircleCheck } from '@element-plus/icons-vue'
+</script>
