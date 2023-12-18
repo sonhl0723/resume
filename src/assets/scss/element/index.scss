@@ -220,3 +220,11 @@
 .el-message-box__btns button:nth-child(2) {
   margin-left: 6px;
 }
+
+.el-step__description {
+  white-space: pre-line;
+}
+
+.el-collapse-item {
+  text-align: left;
+}
