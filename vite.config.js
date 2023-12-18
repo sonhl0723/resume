@@ -6,7 +6,6 @@ import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 
 // https://vitejs.dev/config/
-// jenkins test
 export default defineConfig({
 	plugins: [
 		vue(),
