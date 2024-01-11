@@ -1,37 +1,55 @@
 <template>
-  <el-descriptions
-  title="Stack" />
-  <el-collapse
-  v-model="allActive">
-    <el-collapse-item
-    title="Language"
-    name="Language">
-      <div v-for="item in languages">
-        {{ item.tech }} - {{ item.used }}
-      </div>
-    </el-collapse-item>
-    <el-collapse-item
-    title="Database"
-    name="Database">
-      <div v-for="item in databases">
-        {{ item.tech }} - {{ item.used }}
-      </div>
-    </el-collapse-item>
-    <el-collapse-item
-    title="Middleware"
-    name="Middleware">
-      <div v-for="item in middlewares">
-        {{ item.tech }} - {{ item.used }}
-      </div>
-    </el-collapse-item>
-    <el-collapse-item
-    title="Tool"
-    name="Tool">
-      <div v-for="item in tools">
-        {{ item.tech }} - {{ item.used }}
-      </div>
-    </el-collapse-item>
-  </el-collapse>
+  <div class="r-component">
+    <el-descriptions
+      title="Stack"
+    />
+    <el-collapse
+      style="margin-top: -1rem;"
+    >
+      <el-row :gutter="20">
+        <el-col :span="12">
+          <el-collapse-item
+            title="Language"
+            name="Language"
+          >
+            <div v-for="item in languages">
+              {{ item.tech }} - {{ item.used }}
+            </div>
+          </el-collapse-item>
+        </el-col>
+        <el-col :span="12">
+          <el-collapse-item
+            title="Database"
+            name="Database"
+          >
+            <div v-for="item in databases">
+              {{ item.tech }} - {{ item.used }}
+            </div>
+          </el-collapse-item>
+        </el-col>
+        <el-col :span="12">
+          <el-collapse-item
+            title="Middleware"
+            name="Middleware"
+          >
+            <div v-for="item in middlewares">
+              {{ item.tech }} - {{ item.used }}
+            </div>
+          </el-collapse-item>
+        </el-col>
+        <el-col :span="12">
+          <el-collapse-item
+            title="Tool"
+            name="Tool"
+          >
+            <div v-for="item in tools">
+              {{ item.tech }} - {{ item.used }}
+            </div>
+          </el-collapse-item>
+        </el-col>
+      </el-row>
+    </el-collapse>
+  </div>
 </template>
   
   <script setup>

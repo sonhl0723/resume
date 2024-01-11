@@ -1,8 +1,6 @@
 <template>
   <div
-    :style="{
-      boxShadow: `--el-box-shadow-dark`,
-    }"
+    class="r-component"
   />
 </template>
   

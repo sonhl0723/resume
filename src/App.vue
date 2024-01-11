@@ -4,6 +4,7 @@
       <component :is="layout">
         <router-view />
       </component>
+      <slot />
     </DefaultLayout>
   </div>
 </template>

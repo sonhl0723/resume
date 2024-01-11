@@ -223,8 +223,70 @@
 
 .el-step__description {
   white-space: pre-line;
+  font-size: 14px;
+  margin: 0.3rem 0 1.5rem 0;
+}
+
+.r-component {
+  margin: 0 0 5% 0;
+}
+
+.el-descriptions__title {
+  margin-left: 0.5rem;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #215015;
+}
+
+.el-collapse {
+  border-top: none;
+  border-bottom: none;
 }
 
 .el-collapse-item {
   text-align: left;
+}
+
+.el-collapse-item:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.el-collapse-item__header {
+  font-size: 15px;
+  font-weight: border;
+}
+
+.el-collapse-item__wrap {
+  margin-left: 0.4rem;
+}
+
+.el-descriptions__body .el-descriptions__table .el-descriptions__cell {
+  font-size: 16px;
+}
+
+.el-step__head.is-finish {
+  color: var(--el-color-info-light-5);
+}
+
+.el-collapse-item__content {
+  font-size: 14px;
+}
+
+.el-card .title {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.el-card .content {
+  font-size: 14px;
+  margin-left: auto;
+  color: val(--el-color-info-dark-2);
+}
+
+.cert-card-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

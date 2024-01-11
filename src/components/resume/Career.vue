@@ -1,23 +1,25 @@
 <template>
   <div
-    :style="{
-      boxShadow: `--el-box-shadow-dark`
-    }"
+    class="r-component"
   >
     <el-descriptions
-    title="Career" />
+      title="Career"
+    />
     <el-steps
-    direction="vertical"
-    :active="1"
-    style="--el-step__description-white-space: pre-line">
+      direction="vertical"
+      :active="1"
+      style="--el-step__description-white-space: pre-line"
+    >
       <el-step
-      :icon="CircleCheck"
-      :title="ngl.title"
-      :description="ngl.description" />
+        :icon="CircleCheck"
+        :title="ngl.title"
+        :description="ngl.description"
+      />
       <el-step
-      :icon="CircleCheck"
-      :title="ktds.title"
-      :description="ktds.description" />
+        :icon="CircleCheck"
+        :title="ktds.title"
+        :description="ktds.description"
+      />
     </el-steps>
   </div>
 </template>
