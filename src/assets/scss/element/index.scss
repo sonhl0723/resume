@@ -253,7 +253,7 @@
 
 .el-collapse-item__header {
   font-size: 15px;
-  font-weight: border;
+  font-weight: bold;
 }
 
 .el-collapse-item__wrap {
@@ -269,12 +269,13 @@
 }
 
 .el-collapse-item__content {
-  font-size: 14px;
+  padding-top: 0.3px;
+  font-size: 15px;
 }
 
 .el-card .title {
   font-size: 16px;
-  text-align: center;
+  font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
@@ -289,4 +290,28 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.el-timeline-item__timestamp {
+  text-align: left;
+  color: #212C22;
+  font-size: 15px;
+}
+
+.el-timeline .el-timeline-item__center .el-timeline-item__wrapper {
+  width: 50%;
+}
+
+.edu-card-body {
+  text-align: left;
+}
+
+.contents-wrapper {
+  margin-left: 3.5rem;
+}
+
+.el-descriptions__label {
+  font-weight: bold;
+  display: inline-block;
+  width: 50px;
 }

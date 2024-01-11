@@ -30,15 +30,19 @@ import { CircleCheck } from '@element-plus/icons-vue'
 const ngl = {
   "title": "NGL Transportation",
   "description": `2022.09~2022.12
-  데이터베이스 설계
-  프론트엔드 개발`
+  인턴
+  
+  - 데이터베이스 설계 - PostgreSQL
+  - 프론트엔드 개발 - React.js`
 }
 
 const ktds = {
   "title": "KT ds",
   "description": `2023.01~
-  IoT 플랫폼 개발
-  웹 개발`
+  정규직
+
+  IoT 플랫폼 개발 - Spring Boot, Netty, 
+  웹 개발 - BackEnd(Spring Boot, PostgreSQL, Nexus3)`
 }
 
 </script>

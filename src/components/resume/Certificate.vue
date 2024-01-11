@@ -30,7 +30,7 @@
             oPIC (IM)
           </div>
           <div class="content">
-            유효기간 써야됨
+            2023.09.16 ~ 2025.09.15
           </div>
         </el-card>
       </el-col>
