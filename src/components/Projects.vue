@@ -1,7 +1,7 @@
 <template>
-  <Project />
+  <ProjectList />
 </template>
 
 <script setup>
-import Project from '@/components/projects/Project.vue';
+import ProjectList from '@/components/projects/ProjectList.vue';
 </script>

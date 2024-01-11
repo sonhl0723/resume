@@ -308,10 +308,16 @@
 
 .contents-wrapper {
   margin-left: 3.5rem;
+  padding: 24px 3.5rem 24px 0 !important;
 }
 
 .el-descriptions__label {
   font-weight: bold;
   display: inline-block;
   width: 50px;
+}
+
+.el-link__inner {
+  width: 100%;
+  display: block;
 }
