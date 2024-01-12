@@ -2,5 +2,5 @@
   <p>test2</p>
 </template>
   
-  <script setup>
-  </script>
+<script setup>
+</script>

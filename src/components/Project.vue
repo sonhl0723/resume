@@ -4,7 +4,7 @@
 </template>
 
 <script setup>
-    import ProjectList from '@/components/projects/ProjectList.vue'
+    import ProjectList from '@/components/ProjectList.vue'
     import { useRouter } from 'vue-router'
 
     const router = useRouter()
