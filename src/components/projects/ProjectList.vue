@@ -1,5 +1,4 @@
 <template>
-  <!-- <a>ProjectList</a> -->
   <el-row :gutter="20">
     <el-col
       v-for="project in project_list"
@@ -7,9 +6,10 @@
       style="padding-bottom: 1rem;"
     >
       <el-link
-        href="/projects/vehicle-counting"
+        v-if="project.view"
         :underline="false"
         style="display: flex;"
+        @click="routing(project.name)"
       >
         <el-card
           shadow="hover"
@@ -24,33 +24,36 @@
 </template>
 
 <script setup>
-const curr_path = window.location.pathname
+  import { useRouter } from 'vue-router'
 
-const project_list = [
-  {
-    name: '/vehicle-counting',
-    path: '/projects/vehicle-counting',
-    view: true
-  },
-  {
-    name: '/raspgpt',
-    path: curr_path+'raspgpt',
-    view: true
-  },
-  {
-    name: '/smart-army',
-    path: curr_path+'smart-army',
-    view: true
-  },
-  {
-    name: '/smart-army',
-    path: curr_path+'smart-army',
-    view: true
-  },
-  {
-    name: '/smart-army',
-    path: curr_path+'smart-army',
-    view: true
+  const router = useRouter()
+
+  const project_list = [
+    {
+      name: 'vehicle-counting',
+      view: true
+    },
+    {
+      name: 'raspgpt',
+      view: true
+    },
+    {
+      name: 'smart-army',
+      view: true
+    },
+    {
+      name: 'smart-army',
+      view: false
+    },
+    {
+      name: 'smart-army',
+      view: false
+    }
+  ]
+
+  const routing = (p) => {
+    router.push({
+      name: p
+    })
   }
-]
 </script>
