@@ -1,29 +1,31 @@
 <template>
   <el-menu
-  :default-active="activeIndex"
-  mode="horizontal"
-  :ellipsis="false"
-  @select="handleSelect"
+    :default-active="activeIndex"
+    mode="horizontal"
+    :ellipsis="false"
+    @select="handleSelect"
   >
-  <el-menu-item index="resume">
-    Resume
-  </el-menu-item>
-  <el-menu-item index="projects">
-    Projects
-  </el-menu-item>
+    <el-menu-item index="resume">
+      Resume
+    </el-menu-item>
+    <el-menu-item index="projects">
+      Projects
+    </el-menu-item>
   </el-menu>
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { data } from '@/stores/central'
 
-const activeIndex = ref('resume')
+const activeIndex = data().getCurrMenu
 const router = useRouter()
 
 const handleSelect = (path) => {
+  if(path != null) data().setCurrMenu(path)
+  
   router.push({
-    name: path
+    name: data().getCurrMenu
   })
 }
 </script>
