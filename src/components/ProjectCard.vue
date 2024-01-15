@@ -5,27 +5,24 @@
     <el-image
       :src="parseImgUrl(info.card_img)"
       fit="scale-down"
-    >
-      <div class="p-5">
-        <el-text>
-          {{ props.info.card_title }}
-        </el-text>
-        <div class="flex space-x-2">
-          <el-tag class="ml-2">
-            HTML
-          </el-tag>
-          <el-tag class="ml-2">
-            CSS
-          </el-tag>
-          <el-tag class="ml-2">
-            Javascript
-          </el-tag>
-        </div>
-        <el-text>
-          {{ info.card_description }}
-        </el-text>
+    />
+    <div class="p-5">
+      <el-text>
+        {{ props.info.card_title }}
+      </el-text>
+      <div class="flex space-x-2 card-text">
+        <el-tag
+          v-for="t in props.info.card_tag"
+          :key="t"
+          class="ml-2"
+        >
+          {{ t }}
+        </el-tag>
       </div>
-    </el-image>
+      <el-text>
+        {{ props.info.card_description }}
+      </el-text>
+    </div>
   </el-card>
 </template>
 

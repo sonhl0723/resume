@@ -1,9 +1,9 @@
 <template>
   <div class="app-wrapper">
     <DefaultLayout>
-      <component :is="layout">
-        <router-view />
-      </component>
+      <!-- <component :is="layout"> -->
+      <router-view />
+      <!-- </component> -->
     </DefaultLayout>
   </div>
 </template>
@@ -14,10 +14,10 @@ import { ref, watchEffect } from 'vue';
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 
 
-const route = useRoute();
-const layout = ref(null);
+// const route = useRoute();
+// const layout = ref(null);
 
-watchEffect(() => {
-  layout.value = route.meta.layout
-})
+// watchEffect(() => {
+//   layout.value = route.meta.layout
+// })
 </script>

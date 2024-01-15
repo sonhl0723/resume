@@ -2,6 +2,7 @@
   <el-row :gutter="20">
     <el-col
       v-for="p in project_list"
+      :key="p.name"
       :span="8"
       style="padding-bottom: 1rem;"
     >
