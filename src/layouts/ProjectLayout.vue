@@ -1,5 +1,5 @@
 <template>
-  <p>Layout Test</p>
+  <a>layout test</a>
 </template>
 
 <script setup>

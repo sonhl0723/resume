@@ -1,9 +1,8 @@
 <template>
   <div class="app-wrapper">
     <DefaultLayout>
-      <!-- <component :is="layout"> -->
-      <router-view />
-      <!-- </component> -->
+      <router-view v-if="layout==null" />
+      <ProjectLayout v-if="layout==ProjectLayout" />
     </DefaultLayout>
   </div>
 </template>
@@ -12,12 +11,14 @@
 import { useRoute } from 'vue-router';
 import { ref, watchEffect } from 'vue';
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
+import ProjectLayout from './layouts/ProjectLayout.vue'
 
 
-// const route = useRoute();
-// const layout = ref(null);
+const route = useRoute();
+const layout = ref(null);
 
-// watchEffect(() => {
-//   layout.value = route.meta.layout
-// })
+watchEffect(() => {
+  layout.value = route.meta.layout
+  console.log(layout.value)
+})
 </script>
