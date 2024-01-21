@@ -13,7 +13,7 @@ export const projects = defineStore('projects', {
             },
             {
                 'identifier': 'raspgpt',
-                'card_img': '',
+                'card_img': '../assets/img/progress.png',
                 'card_title': 'RaspGPT 스마트 스피커',
                 'card_tag': ['Spring Boot', 'Python', 'Raspberry Pi'],
                 'card_description': '라즈베리파이, ChatGPT를 활용한 스마트 스피커',
@@ -21,7 +21,7 @@ export const projects = defineStore('projects', {
             },
             {
                 'identifier': 'smart-army',
-                'card_img': '',
+                'card_img': '../assets/img/progress.png',
                 'card_title': '지능형 스마트부대(1-3단계) 시범구축 사업',
                 'card_tag': ['Spring Boot', 'PostgreSQL', 'Vue3'],
                 'card_description': '',

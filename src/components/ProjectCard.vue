@@ -4,7 +4,7 @@
   >
     <el-image
       :src="parseImgUrl(info.card_img)"
-      fit="scale-down"
+      style="width: 350px%; height: 150px;"
     />
     <div class="p-5">
       <el-text>

@@ -19,6 +19,5 @@ const layout = ref(null);
 
 watchEffect(() => {
   layout.value = route.meta.layout
-  console.log(layout.value)
 })
 </script>
