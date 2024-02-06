@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 export const projects = defineStore('projects', {
     state: () => ({
-        data: [
+        project_list: [
             {
                 'identifier': 'vehicle-counting',
                 'card_img': '../assets/img/vc_card.png',
@@ -27,11 +27,34 @@ export const projects = defineStore('projects', {
                 'card_description': '',
                 'card_view_enable': true
             }
-        ]
+        ],
+        projects_info: {
+            'vehicle-counting': {
+                '기간': '2021.09 ~ 2022.05',
+                '발주처': '캡스톤 프로젝트',
+                '기술 스택': ['HTML', 'Javascript', 'Express.js', 'Python'],
+                '역할': 'Backend,  Frontend'
+            },
+            'raspgpt': {
+                '기간': '2021.09 ~ 2022.05',
+                '발주처': '토이 프로젝트',
+                '기술 스택': ['Python', 'EfficientWord-Net'],
+                '역할': 'Backend'
+            },
+            'smart-army': {
+                '기간': '2021.09 ~ 2022.05',
+                '발주처': '육군 본부',
+                '기술 스택': ['Spring Boot', 'Netty'],
+                '역할': 'Backend, CI/CD'
+            }
+        }
     }),
     getters: {
         getProjectList: (state) => {
-            return state.data
+            return state.project_list
+        },
+        getProjectInfo: (state) => {
+            return state.projects_info
         }
     },
     actions: {}

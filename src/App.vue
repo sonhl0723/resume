@@ -1,21 +1,32 @@
 <template>
   <div class="app-wrapper">
     <DefaultLayout>
-      <router-view v-if="layout==null" />
-      <ProjectLayout v-if="layout==ProjectLayout" />
+      <router-view />
     </DefaultLayout>
   </div>
 </template>
 
 <script setup>
 import { useRoute } from 'vue-router';
-import { ref, watchEffect } from 'vue';
+import { onBeforeMount, onMounted, ref, watchEffect } from 'vue';
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
-import ProjectLayout from './layouts/ProjectLayout.vue'
-
+import { ElLoading } from 'element-plus'
 
 const route = useRoute();
 const layout = ref(null);
+const loading = ref(null);
+
+onBeforeMount(() => {
+  loading.value = ElLoading.service({
+    lock: true,
+    text: "Loading...",
+    background: 'rgba(0,0,0,0,7)',
+  })
+})
+
+onMounted(() => {
+  loading.value.close()
+})
 
 watchEffect(() => {
   layout.value = route.meta.layout
