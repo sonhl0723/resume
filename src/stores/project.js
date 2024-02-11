@@ -5,7 +5,7 @@ export const projects = defineStore('projects', {
         project_list: [
             {
                 'identifier': 'vehicle-counting',
-                'card_img': '../assets/img/vc_card.png',
+                'card_img': '/assets/img/vc_card.png',
                 'card_title': 'FCN-BLA 모델에 기반한 교통량 분석 시스템',
                 'card_tag': ['HTML', 'Javascript', 'Python', 'Express.js', 'Flask'],
                 'card_description': '국가 교통 정보 센터(ITS)의 OpenAPI를 활용한 실시간 교통량 분석 시스템',
@@ -13,7 +13,7 @@ export const projects = defineStore('projects', {
             },
             {
                 'identifier': 'raspgpt',
-                'card_img': '../assets/img/progress.png',
+                'card_img': '/assets/img/progress.png',
                 'card_title': 'RaspGPT 스마트 스피커',
                 'card_tag': ['Spring Boot', 'Python', 'Raspberry Pi'],
                 'card_description': '라즈베리파이, ChatGPT를 활용한 스마트 스피커',
@@ -21,7 +21,7 @@ export const projects = defineStore('projects', {
             },
             {
                 'identifier': 'smart-army',
-                'card_img': '../assets/img/progress.png',
+                'card_img': '/assets/img/progress.png',
                 'card_title': '지능형 스마트부대(1-3단계) 시범구축 사업',
                 'card_tag': ['Spring Boot', 'PostgreSQL', 'Vue3'],
                 'card_description': '',
@@ -33,19 +33,22 @@ export const projects = defineStore('projects', {
                 '기간': '2021.09 ~ 2022.05',
                 '발주처': '캡스톤 프로젝트',
                 '기술 스택': ['HTML', 'Javascript', 'Express.js', 'Python'],
-                '역할': 'Backend,  Frontend'
+                '역할': 'Backend,  Frontend',
+                '프로젝트 내용': '/assets/projects_md/vehicle_counting.md'
             },
             'raspgpt': {
                 '기간': '2021.09 ~ 2022.05',
                 '발주처': '토이 프로젝트',
                 '기술 스택': ['Python', 'EfficientWord-Net'],
-                '역할': 'Backend'
+                '역할': 'Backend',
+                '프로젝트 내용': '/assets/projects_md/rasp_gpt.md'
             },
             'smart-army': {
                 '기간': '2021.09 ~ 2022.05',
                 '발주처': '육군 본부',
                 '기술 스택': ['Spring Boot', 'Netty'],
-                '역할': 'Backend, CI/CD'
+                '역할': 'Backend, CI/CD',
+                '프로젝트 내용': '/assets/projects_md/smart_army.md'
             }
         }
     }),

@@ -10,6 +10,8 @@ import koKr from 'element-plus/dist/locale/ko.mjs'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
+import Markdown from 'vue3-markdown-it'
+
 import '@/assets/scss/global.scss'
 
 const app = createApp(App)
@@ -20,5 +22,6 @@ pinia.use(piniaPluginPersistedstate)
 app.use(router)
 app.use(pinia)
 app.use(ElementPlus, { locale: koKr })
+app.use(Markdown)
 
 app.mount('#app');

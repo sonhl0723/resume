@@ -12,20 +12,21 @@
           :span="24"
         >
           <el-col
+            v-if="name!='프로젝트 내용'"
             :span="8"
             class="description-col-title"
           >
             {{ name }}
           </el-col>
           <el-col
-            v-if="name!='기술 스택'"
+            v-if="name!='기술 스택' && name!='프로젝트 내용'"
             :span="16"
             class="description-col-content"
           >
             {{ value }}
           </el-col>
           <el-col
-            v-else
+            v-else-if="name=='기술 스택'"
             class="description-col-content"
             :span="16"
           >

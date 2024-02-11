@@ -3,12 +3,12 @@
     :project-description="summary_info"
   />
   <ProjectContent 
-    :project-md-path="router.currentRoute.value.name+'.md'"
+    :project-md-path="summary_info['프로젝트 내용']"
   />
 </template>
 
 <script setup>
-  import { onMounted, ref } from 'vue';
+  import { onBeforeMount, ref } from 'vue';
   import { useRouter } from 'vue-router'
   import { projects } from '@/stores/project'
   import ProjectDescription from '@/components/ProjectDescription.vue'
@@ -19,7 +19,7 @@
   const summary_info = ref(null)
 
 
-  onMounted(() => {
+  onBeforeMount(() => {
     summary_info.value = (project_info[router.currentRoute.value.name])
   })
 </script>
