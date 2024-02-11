@@ -1,8 +1,9 @@
 <template>
+  <h2 class="project-title">{{ projectDescription['제목'] }}</h2>
   <el-row :gutter="20">
     <el-col
       :span="12"
-      :offset="6"
+      :offset="0"
     >
       <el-card class="box-card">
         <el-row
@@ -12,14 +13,14 @@
           :span="24"
         >
           <el-col
-            v-if="name!='프로젝트 내용'"
+            v-if="name!='프로젝트 내용' && name!='제목'"
             :span="8"
             class="description-col-title"
           >
             {{ name }}
           </el-col>
           <el-col
-            v-if="name!='기술 스택' && name!='프로젝트 내용'"
+            v-if="name!='기술 스택' && name!='프로젝트 내용' && name!='제목'"
             :span="16"
             class="description-col-content"
           >
@@ -59,6 +60,16 @@
 </script>
   
   <style scoped>
+  .project-title {
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: left;
+    padding-bottom: 1.6rem;
+    color: #215015;
+  }
+  .box-card {
+    margin-bottom: 1.5rem;
+  }
   .text-item {
     width: 100%;
   }

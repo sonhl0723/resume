@@ -30,6 +30,7 @@ export const projects = defineStore('projects', {
         ],
         projects_info: {
             'vehicle-counting': {
+                '제목': 'FCN-BLA 모델에 기반한 교통량 분석 시스템',
                 '기간': '2021.09 ~ 2022.05',
                 '발주처': '캡스톤 프로젝트',
                 '기술 스택': ['HTML', 'Javascript', 'Express.js', 'Python'],
@@ -37,6 +38,7 @@ export const projects = defineStore('projects', {
                 '프로젝트 내용': '/assets/projects_md/vehicle_counting.md'
             },
             'raspgpt': {
+                '제목': '라즈베리파이 & ChatGPT 스마트 스피커',
                 '기간': '2021.09 ~ 2022.05',
                 '발주처': '토이 프로젝트',
                 '기술 스택': ['Python', 'EfficientWord-Net'],
@@ -44,6 +46,7 @@ export const projects = defineStore('projects', {
                 '프로젝트 내용': '/assets/projects_md/rasp_gpt.md'
             },
             'smart-army': {
+                '제목': '지능형 스마트부대(1-3단계) 시범구축 사업',
                 '기간': '2021.09 ~ 2022.05',
                 '발주처': '육군 본부',
                 '기술 스택': ['Spring Boot', 'Netty'],
