@@ -59,7 +59,7 @@
     })
 </script>
   
-  <style scoped>
+<style scoped>
   .project-title {
     font-weight: bolder;
     font-size: xx-large;
@@ -93,4 +93,4 @@
     color: #FFFFFF;
     font-weight: normal;
   }
-  </style>
+</style>

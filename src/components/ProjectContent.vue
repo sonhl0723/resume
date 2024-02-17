@@ -1,6 +1,7 @@
 <template>
   <Markdown
   v-if="markdown_content != null"
+  class="project-content"
   :source="markdown_content" />
 </template>
 
@@ -25,3 +26,9 @@
         })
     })
 </script>
+
+<style scoped>
+    .project-content {
+        text-align: left;
+    }
+</style>
