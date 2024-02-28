@@ -1,13 +1,15 @@
 <template>
-  <Markdown
-  v-if="markdown_content != null"
-  class="project-content"
-  :source="markdown_content" />
+  <div v-if="markdown_content != null">
+    <markdown-it-vue
+      :content="markdown_content"
+      :options="markdownIt"
+    />
+  </div>
 </template>
 
 <script setup>
     import { defineProps } from 'vue';
-    import Markdown from 'vue3-markdown-it'
+    import MarkdownItVue from 'markdown-it-vue';
     import axios from 'axios'
     import { onMounted, ref } from 'vue';
 
@@ -19,6 +21,9 @@
     })
 
     const markdown_content = ref(null)
+    const markdownIt = {
+        html: true
+    }
 
     onMounted(() => {
         axios.get(props.projectMdPath).then(response => {
