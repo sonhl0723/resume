@@ -2,6 +2,8 @@
 
 [[toc]]
 
+---
+
 # Summary
 
 -   컴퓨터 비전 분야의 차량 계수 모델인 FCN-rLSTM 모델에 기반하여 시간 역학적 정보를 더 효율적으로 참조할 수 있는 FCN-BLA 모델 고안
@@ -111,5 +113,9 @@ p {
 }
 ul {
     font-size: 17px !important;
+}
+hr {
+    background-color: #808080 !important;
+    display: block;
 }
 </style>
