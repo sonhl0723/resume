@@ -1,6 +1,6 @@
----
-## Index
----
+# Index
+
+[[toc]]
 
 # Summary
 
@@ -15,7 +15,7 @@
 ## FCN-rLSTM란
 
 <figure>
-<img src="/assets/img/vehicle_counting/FCN-rLSTM.png" style="width: 500px; height: 300px"/>
+<img src="/assets/img/vehicle_counting/FCN-rLSTM.png" style="width: 450px; height: 250px"/>
 <figcaption>FCN-rLSTM</figcaption>
 </figure>
 
@@ -26,7 +26,7 @@
 ## FCN-rLSTM 모델의 한계
 
 <figure>
-<img src="/assets/img/vehicle_counting/FCN-rLSTM_density.png" style="width: 500px; height: 300px"/>
+<img src="/assets/img/vehicle_counting/FCN-rLSTM_density.png" style="width: 450px; height: 250px"/>
 <figcaption>FCN-rLSTM Density Map</figcaption>
 </figure>
 
@@ -37,7 +37,7 @@
 ## FCN-BLA의 특징
 
 <figure>
-<img src="/assets/img/vehicle_counting/FCN-BLA.png" style="width: 500px; height: 300px"/>
+<img src="/assets/img/vehicle_counting/FCN-BLA.png" style="width: 450px; height: 250px"/>
 <figcaption>FCN-BLA</figcaption>
 </figure>
 
@@ -48,11 +48,11 @@
 ## FCN-rLSTM vs FCN-BLA
 
 <figure>
-<img src="/assets/img/vehicle_counting/FCN-BLA_loss.png" style="width: 1100px; height: 200px"/>
+<img src="/assets/img/vehicle_counting/FCN-BLA_loss.png" style="width: 1000px; height: 150px"/>
 <figcaption>FCN-BLA Loss</figcaption>
 </figure>
 <figure>
-<img src="/assets/img/vehicle_counting/model_compare.png" style="width: 300px; height: 70px"/>
+<img src="/assets/img/vehicle_counting/model_compare.png" style="width: 250px; height: 60px"/>
 <figcaption>FCN-rLSTM vs FCN-BLA</figcaption>
 </figure>
 
@@ -63,7 +63,7 @@
 ## 시스템 아키텍처
 
 <figure>
-<img src="/assets/img/vehicle_counting/system_architecture.png" style="width: 500px; height: 300px"/>
+<img src="/assets/img/vehicle_counting/system_architecture.png" style="width: 450px; height: 250px"/>
 <figcaption>System Architecture</figcaption>
 </figure>
 
@@ -72,21 +72,21 @@
 ## 메인 서버
 
 <figure>
-<img src="/assets/img/vehicle_counting/main_architecture.png" style="width: 500px; height: 300px"/>
+<img src="/assets/img/vehicle_counting/main_architecture.png" style="width: 450px; height: 250px"/>
 <figcaption>Main Server Architecture</figcaption>
 </figure>
 
 ## 분석 서버
 
 <figure>
-<img src="/assets/img/vehicle_counting/FCN-BLA_input.png" style="width: 500px; height: 300px"/>
+<img src="/assets/img/vehicle_counting/FCN-BLA_input.png" style="width: 450px; height: 250px"/>
 <figcaption>FCN-BLA Input Structure</figcaption>
 </figure>
 
 ## 데이터 API 서버
 
 <figure>
-<img src="/assets/img/vehicle_counting/data_api_flow.png" style="width: 500px; height: 300px"/>
+<img src="/assets/img/vehicle_counting/data_api_flow.png" style="width: 450px; height: 250px"/>
 <figcaption>Data API Server Flow</figcaption>
 </figure>
 

@@ -4,8 +4,10 @@ import { fileURLToPath, URL } from 'node:url';
 
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
+
 import Markdown from 'unplugin-vue-markdown/vite';
-import MarkdownItPrism from 'markdown-it-prism'
+import MarkdownItPrism from 'markdown-it-prism';
+import MarkdownItToc from 'markdown-it-table-of-contents';
 
 // https://vitejs.dev/config/
 // jenkins test
@@ -41,6 +43,7 @@ export default defineConfig({
 			},
 			markdownItSetup(md) {
 				md.use(MarkdownItPrism)
+				md.use(MarkdownItToc)
 			}
 		}),
 	],

@@ -19,6 +19,7 @@
 		"eslint-plugin-prettier": "^5.0.0",
 		"eslint-plugin-vue": "^9.16.1",
 		"markdown-it-prism": "^2.3.0",
+		"markdown-it-table-of-contents": "^0.6.0",
 		"pinia": "^2.1.7",
 		"pinia-plugin-persistedstate": "^3.2.1",
 		"prettier": "^3.0.0",
