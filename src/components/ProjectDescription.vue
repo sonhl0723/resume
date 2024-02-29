@@ -1,49 +1,44 @@
 <template>
-  <h2 class="project-title">{{ projectDescription['제목'] }}</h2>
-  <el-row :gutter="20">
-    <el-col
-      :span="12"
-      :offset="0"
+  <h2 class="project-title">
+    {{ projectDescription['제목'] }}
+  </h2>
+  <el-card class="box-card">
+    <el-row
+      v-for="(value, name, index) in props.projectDescription"
+      :key="index"
+      class="description-row"
+      :span="24"
     >
-      <el-card class="box-card">
-        <el-row
-          v-for="(value, name, index) in props.projectDescription"
-          :key="index"
-          class="description-row"
-          :span="24"
+      <el-col
+        v-if="name!='프로젝트 내용' && name!='제목'"
+        :span="8"
+        class="description-col-title"
+      >
+        {{ name }}
+      </el-col>
+      <el-col
+        v-if="name!='기술 스택' && name!='프로젝트 내용' && name!='제목'"
+        :span="16"
+        class="description-col-content"
+      >
+        {{ value }}
+      </el-col>
+      <el-col
+        v-else-if="name=='기술 스택'"
+        class="description-col-content"
+        :span="16"
+      >
+        <el-tag
+          v-for="(stack, s_idx) in value"
+          :key="s_idx"
+          class="tag-content"
+          color="#336837"
         >
-          <el-col
-            v-if="name!='프로젝트 내용' && name!='제목'"
-            :span="8"
-            class="description-col-title"
-          >
-            {{ name }}
-          </el-col>
-          <el-col
-            v-if="name!='기술 스택' && name!='프로젝트 내용' && name!='제목'"
-            :span="16"
-            class="description-col-content"
-          >
-            {{ value }}
-          </el-col>
-          <el-col
-            v-else-if="name=='기술 스택'"
-            class="description-col-content"
-            :span="16"
-          >
-            <el-tag
-              v-for="(stack, s_idx) in value"
-              :key="s_idx"
-              class="tag-content"
-              color="#336837"
-            >
-              {{ stack }}
-            </el-tag>
-          </el-col>
-        </el-row>
-      </el-card>
-    </el-col>
-  </el-row>
+          {{ stack }}
+        </el-tag>
+      </el-col>
+    </el-row>
+  </el-card>
 </template>
   
 <script setup>
@@ -68,7 +63,8 @@
     color: #215015;
   }
   .box-card {
-    margin-bottom: 1.5rem;
+    margin: 0.7rem 0 3rem 0;
+    width: 70%;
   }
   .text-item {
     width: 100%;
