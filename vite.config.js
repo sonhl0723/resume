@@ -4,12 +4,15 @@ import { fileURLToPath, URL } from 'node:url';
 
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
+import Markdown from 'unplugin-vue-markdown/vite';
 
 // https://vitejs.dev/config/
 // jenkins test
 export default defineConfig({
 	plugins: [
-		vue(),
+		vue({
+			include: [/\.vue$/, /\.md$/],
+		}),
 		AutoImport({
 			include: [
 				/\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
@@ -28,6 +31,14 @@ export default defineConfig({
 			extensions: ['vue', 'md'],
 			include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
 			dts: './components.d.ts',
+		}),
+		Markdown({
+			markdownItOptions: {
+				html: true,
+				linkify: true,
+				typographer: true,
+			},
+			wrapperClasses: 'markdown-body'
 		}),
 	],
 	resolve: {
