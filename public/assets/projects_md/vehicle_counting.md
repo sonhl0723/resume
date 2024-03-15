@@ -69,7 +69,7 @@
 <figcaption>System Architecture</figcaption>
 </figure>
 
-> **CCTV 스트리밍 서버**: 국가 교통 정보 센터(ITS)에서 제공하는 OpenAPI 서버<br/> **클라이언트 주소 서버**: 실시간 고속도로 영상을 스트리밍하기 위한 HLS 주소 가져오는걸 무슨 단어로 하지 및 제공<br/> **데이터 API 서버**: 교통량 분석 정보 제공 및 저장<br/> **모델 서버**: FCN-BLA 모델에 기반한 교통량 분석 (1 frame per second)<br/>
+> **CCTV 스트리밍 서버**: 국가 교통 정보 센터(ITS)에서 제공하는 OpenAPI 서버<br/> **클라이언트 주소 서버**: 실시간 고속도로 영상을 스트리밍하기 위한 HLS 주소 풀링 및 제공<br/> **데이터 API 서버**: 교통량 분석 정보 제공 및 저장<br/> **모델 서버**: FCN-BLA 모델에 기반한 교통량 분석 (1 frame per second)<br/>
 
 ## 메인 서버
 
@@ -77,6 +77,9 @@
 <img src="/assets/img/vehicle_counting/main_architecture.png" style="width: 450px; height: 250px"/>
 <figcaption>Main Server Architecture</figcaption>
 </figure>
+
+&nbsp;&nbsp;메인 서버는 사용자에게 지원되는 웹/안드로이드에서 요청하는 CCTV에 대한 실시간 영상 및 예측 결과, 기간별 분석 데이터를 보여주는 기능을 제공하기 위한 서버다. HLS 스트리밍 환경은 각 웹/안드로이드 클라이언트 딴에서 제공되며 메인 서버는 특정 CCTV의 HLS 주소를 클라이언트에게 제공한다.
+&nbsp;&nbsp;또한, 사용자가 분석 정보를 원하는 CCTV에 대한 기간별 분석 데이터 및 교통량 예측 결과를 모델 서버로부터 클라이언트에게 제공한다.
 
 ## 분석 서버
 
