@@ -88,6 +88,10 @@
 <figcaption>FCN-BLA Input Structure</figcaption>
 </figure>
 
+&nbsp;&nbsp;분석 서버에서는 각 CCTV의 실시간 영상 프레임을 바탕으로 차량 개수를 분석한다.<br/>
+&nbsp;&nbsp;FCN-BLA 모델은 양방향 LSTM 구조를 사용하기 때문에 _FCN-BLA Input Structure_ 그림과 같은 형태의 연속된 이미지 입력을 요구한다. 많은 테스트 결과 연속된 8개의 프레임 정보를 input으로 줄 때 가장 좋은 퍼포먼스를 보여줬다. 하지만 서버 스펙을 고려하여 각 CCTV 마다 최근 5개의 프레임에 대한 분석을 진행하고 그 분석에 대한 정보를 사용자에게 제공했다.
+
+
 ## 데이터 API 서버
 
 <figure>
@@ -95,7 +99,13 @@
 <figcaption>Data API Server Flow</figcaption>
 </figure>
 
+&nbsp;&nbsp;데이터 API 서버는 특정 CCTV에 대한 분석 정보를 분석 서버에서 가져와 클라이언트에게 제공하고 분석 정보를 배열에 저장하고 있다가 1시간 간격으로 CSV 파일로 저장한다.<br/>
+&nbsp;&nbsp;사용자가 분석 정보를 요구하는 CCTV의 변동이 잦을 것이라 생각했으며 분석 정보 저장을 위한 데이터 수집을 위해 클라이언트 서버와 분석 서버 간의 connection을 socket으로 결정하였다.
+
 # Result
+&nbsp;&nbsp;최종적으로 FCN-BLA 모델을 고안하여 졸업 프로젝트를 마무리했지만 논문 일정으로 인해 기존 시스템에 FCN-rLSTM 모델을 사용하여 논문을 작성하였다.
+&nbsp;&nbsp;해당 2022 한국컴퓨터종합학술대회 학부생/주니어 논문경진대회 - 학부생/주니어 논문 경진대회 학부생 부문 장려상을 수상하였고 캡스톤 프로젝트 과목에서는 A+ 성적을 받았다.
+
 
 <style>
 h2 {
