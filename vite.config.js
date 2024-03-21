@@ -8,6 +8,7 @@ import Components from 'unplugin-vue-components/vite';
 import Markdown from 'unplugin-vue-markdown/vite';
 import MarkdownItPrism from 'markdown-it-prism';
 import MarkdownItToc from 'markdown-it-table-of-contents';
+import MarkdownItAnchor from 'markdown-it-anchor';
 
 // https://vitejs.dev/config/
 // jenkins test
@@ -43,6 +44,7 @@ export default defineConfig({
 			},
 			markdownItSetup(md) {
 				md.use(MarkdownItPrism)
+				md.use(MarkdownItAnchor)
 				md.use(MarkdownItToc)
 			}
 		}),
