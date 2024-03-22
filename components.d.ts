@@ -19,7 +19,6 @@ declare module 'vue' {
     ProjectContent: typeof import('./src/components/ProjectContent.vue')['default']
     ProjectDescription: typeof import('./src/components/ProjectDescription.vue')['default']
     ProjectList: typeof import('./src/components/ProjectList.vue')['default']
-    Raspgpt: typeof import('./src/components/projects_md/raspgpt.md')['default']
     RaspGpt: typeof import('./src/components/projects/RaspGpt.vue')['default']
     Resume: typeof import('./src/components/Resume.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
