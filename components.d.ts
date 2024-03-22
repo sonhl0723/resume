@@ -13,6 +13,7 @@ declare module 'vue' {
     Certificate: typeof import('./src/components/resume/Certificate.vue')['default']
     Education: typeof import('./src/components/resume/Education.vue')['default']
     Information: typeof import('./src/components/resume/Information.vue')['default']
+    Military: typeof import('./src/components/resume/Military.vue')['default']
     Project: typeof import('./src/components/Project.vue')['default']
     ProjectCard: typeof import('./src/components/ProjectCard.vue')['default']
     ProjectContent: typeof import('./src/components/ProjectContent.vue')['default']
