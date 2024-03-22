@@ -21,5 +21,7 @@
 
   onBeforeMount(() => {
     summary_info.value = (project_info[router.currentRoute.value.name])
+    console.log(router.currentRoute.value.name)
+    console.log(project_info[router.currentRoute.value.name])
   })
 </script>
