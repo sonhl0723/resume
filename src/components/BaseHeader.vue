@@ -16,16 +16,16 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
-import { data } from '@/stores/central'
+import { ref } from 'vue';
 
-const activeIndex = data().getCurrMenu
+const activeIndex = ref('resume')
 const router = useRouter()
 
 const handleSelect = (path) => {
-  if(path != null) data().setCurrMenu(path)
+  if(path != null) activeIndex.value = path
   
   router.push({
-    name: data().getCurrMenu
+    name: path
   })
 }
 </script>
