@@ -228,13 +228,14 @@
 }
 
 .r-component {
-  margin: 0 0 5% 0;
+  padding: 2.5% 0 2.5% 0;
+  border-bottom: #215015 solid;
 }
 
 .el-descriptions__title {
-  margin-left: 0.5rem;
+  // margin-left: rem;
   margin-bottom: 15px;
-  font-size: 20px;
+  font-size: 25px;
   color: #215015;
 }
 
