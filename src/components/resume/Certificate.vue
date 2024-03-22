@@ -1,7 +1,7 @@
 <template>
   <div class="r-component">
     <el-descriptions
-      title="Certificate"
+      title="자격증"
     />
     <el-row :gutter="12">
       <el-col

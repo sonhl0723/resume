@@ -3,7 +3,7 @@
     class="r-component"
   >
     <el-descriptions
-      title="Career"
+      title="경력 사항"
     />
     <el-steps
       direction="vertical"

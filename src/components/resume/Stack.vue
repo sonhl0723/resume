@@ -1,7 +1,7 @@
 <template>
   <div class="r-component">
     <el-descriptions
-      title="Stack"
+      title="기술 스택"
     />
     <el-collapse
       v-model="allActive"
