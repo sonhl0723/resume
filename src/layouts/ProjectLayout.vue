@@ -2,9 +2,7 @@
   <ProjectDescription 
     :project-description="summary_info"
   />
-  <ProjectContent 
-    :project-md-path="summary_info['프로젝트 내용']"
-  />
+  <ProjectContent />
 </template>
 
 <script setup>
@@ -18,10 +16,7 @@
   const project_info = projects().getProjectInfo
   const summary_info = ref(null)
 
-
   onBeforeMount(() => {
     summary_info.value = (project_info[router.currentRoute.value.name])
-    console.log(router.currentRoute.value.name)
-    console.log(project_info[router.currentRoute.value.name])
   })
 </script>

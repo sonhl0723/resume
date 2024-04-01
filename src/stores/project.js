@@ -34,24 +34,21 @@ export const projects = defineStore('projects', {
                 '기간': '2021.09 ~ 2022.05',
                 '발주처': '캡스톤 프로젝트',
                 '기술 스택': ['HTML', 'Javascript', 'Express.js', 'Python'],
-                '역할': 'Backend,  Frontend',
-                '프로젝트 내용': '/assets/projects_md/vehicle_counting.md'
+                '역할': 'Backend,  Frontend'
             },
             'raspgpt': {
                 '제목': '라즈베리파이 & ChatGPT 스마트 스피커',
                 '기간': '2021.09 ~ 2022.05',
                 '발주처': '토이 프로젝트',
                 '기술 스택': ['Python', 'EfficientWord-Net'],
-                '역할': 'Backend',
-                '프로젝트 내용': '/assets/projects_md/rasp_gpt.md'
+                '역할': 'Backend'
             },
             'smart-army': {
                 '제목': '지능형 스마트부대(1-3단계) 시범구축 사업',
                 '기간': '2021.09 ~ 2022.05',
                 '발주처': '육군 본부',
                 '기술 스택': ['Spring Boot', 'Netty'],
-                '역할': 'Backend, CI/CD',
-                '프로젝트 내용': '/assets/projects_md/smart_army.md'
+                '역할': 'Backend, CI/CD'
             }
         }
     }),
