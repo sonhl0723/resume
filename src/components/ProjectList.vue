@@ -22,8 +22,6 @@
 
 <script setup>
   import { useRouter } from 'vue-router'
-
-  import ProjectCard from '@/components/ProjectCard.vue'
   import { projects } from '@/stores/project'
 
   const router = useRouter()

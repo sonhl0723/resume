@@ -17,19 +17,16 @@ const router = createRouter({
                 {
                     path: 'vehicle-counting',
                     name: 'vehicle-counting',
-                    component: () => import('@/components/projects/VehicleCounting.vue'),
                     meta: { layout: ProjectLayout }
                 },
                 {
                     path: 'raspgpt',
                     name: 'raspgpt',
-                    component: () => import('@/components/projects/RaspGpt.vue'),
                     meta: { layout: ProjectLayout }
                 },
                 {
                     path: 'smart-army',
                     name: 'smart-army',
-                    component: () => import('@/components/projects/SmartArmy.vue'),
                     meta: { layout: ProjectLayout }
                 }
             ]

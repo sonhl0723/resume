@@ -19,12 +19,9 @@ declare module 'vue' {
     ProjectContent: typeof import('./src/components/ProjectContent.vue')['default']
     ProjectDescription: typeof import('./src/components/ProjectDescription.vue')['default']
     ProjectList: typeof import('./src/components/ProjectList.vue')['default']
-    RaspGpt: typeof import('./src/components/projects/RaspGpt.vue')['default']
     Resume: typeof import('./src/components/Resume.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SmartArmy: typeof import('./src/components/projects/SmartArmy.vue')['default']
     Stack: typeof import('./src/components/resume/Stack.vue')['default']
-    VehicleCounting: typeof import('./src/components/projects/VehicleCounting.vue')['default']
   }
 }

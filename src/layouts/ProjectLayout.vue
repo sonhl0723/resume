@@ -9,8 +9,6 @@
   import { onBeforeMount, ref } from 'vue';
   import { useRouter } from 'vue-router'
   import { projects } from '@/stores/project'
-  import ProjectDescription from '@/components/ProjectDescription.vue'
-  import ProjectContent from '@/components/ProjectContent.vue'
 
   const router = useRouter()
   const project_info = projects().getProjectInfo
