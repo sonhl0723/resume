@@ -4,7 +4,6 @@
       title="기술 스택"
     />
     <el-collapse
-      v-model="allActive"
       style="margin-top: -1rem;"
     >
       <el-row :gutter="20">
