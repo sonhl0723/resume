@@ -1,0 +1,42 @@
+name: build vue3(vite) and deploy to raspberry pi server(ubuntu 22.04)
+on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - "README.md"
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy-to-server:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 20.x
+      - name: npm install
+        run: npm install
+      - name: npm build
+        run: npm run build
+      - name: copy package to server via ssh
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER_IP_ADDRESS }}
+          port: ${{ secrets.SERVER_SSH_PORT }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_PRIVATE_KEY }}
+          passphrase: ${{ secrets.SERVER_PASSWORD }}
+          source: "dist"
+          target: ~/
+      - name: move to nginx folder / restart nginx
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP_ADDRESS }}
+          port: ${{ secrets.SERVER_SSH_PORT }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_PRIVATE_KEY }}
+          passphrase: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            cd ~/dist && mv -v ./* $${{ secrets.NGINX_PATH }}
+            rm -rf ~/dist
+            sudo systemctl restart nginx
