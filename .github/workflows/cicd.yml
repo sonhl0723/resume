@@ -39,6 +39,6 @@ jobs:
           key: ${{ secrets.SERVER_PRIVATE_KEY }}
           passphrase: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd ~/dist && mv -v ./* ${{ secrets.NGINX_PATH }}
+            cd ~/dist && rm -rf ${{ secrets.NGINX_PATH }}assets  && mv -v ./* ${{ secrets.NGINX_PATH }}
             rm -rf ~/dist
             sudo systemctl restart nginx
