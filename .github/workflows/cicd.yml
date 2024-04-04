@@ -4,6 +4,8 @@ on:
     branches: [master]
     paths-ignore:
       - "README.md"
+      - ".vscode/**"
+      - "."
   workflow_dispatch:
 
 jobs:
@@ -37,6 +39,6 @@ jobs:
           key: ${{ secrets.SERVER_PRIVATE_KEY }}
           passphrase: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd ~/dist && mv -v ./* $${{ secrets.NGINX_PATH }}
+            cd ~/dist && mv -v ./* ${{ secrets.NGINX_PATH }}
             rm -rf ~/dist
             sudo systemctl restart nginx
