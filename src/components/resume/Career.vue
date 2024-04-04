@@ -8,7 +8,7 @@
     <el-steps
       direction="vertical"
       :active="1"
-      style="--el-step__description-white-space: pre-line; margin-left: 3rem;"
+      style="--el-step__description-white-space: pre-line;"
     >
       <el-step
         :icon="CircleCheck"

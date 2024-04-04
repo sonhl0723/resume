@@ -18,6 +18,9 @@
       <el-descriptions-item label="출생">
         1998.07
       </el-descriptions-item>
+      <el-descriptions-item label="Github">
+        https://github.com/sonhl0723
+      </el-descriptions-item>
     </el-descriptions>
   </div>
 </template>

@@ -221,6 +221,10 @@
   margin-left: 6px;
 }
 
+.el-steps--vertical {
+  margin-left: 3rem;
+}
+
 .el-step__description {
   white-space: pre-line;
   font-size: 14px;
@@ -263,10 +267,43 @@
 
 .el-descriptions__body .el-descriptions__table .el-descriptions__cell {
   font-size: 16px;
+  display: flex;
+}
+
+@media screen and (max-width: 700px) {
+  .el-descriptions__body .el-descriptions__table .el-descriptions__cell {
+    font-size: 16px;
+    display: grid;
+  }
+  .el-timeline {
+    width: max-content;
+  }
+  .el-steps--vertical {
+    margin-left: 0;
+    width: 100%;
+  }
+  .el-card .content {
+    margin-left: 0 !important;
+  }
+  .cert-card-body {
+    flex-direction: row !important;
+    margin-bottom: 2px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cert-card-body {
+    flex-direction: column !important;
+  }
 }
 
 .el-step__head.is-finish {
   color: var(--el-color-info-light-5);
+}
+
+.el-backtop {
+  right: 3rem !important;
+  bottom: 5rem !important;
 }
 
 .el-collapse-item__content {

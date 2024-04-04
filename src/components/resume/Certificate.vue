@@ -3,9 +3,9 @@
     <el-descriptions
       title="자격증"
     />
-    <el-row :gutter="12">
+    <el-row :gutter="el_gutter">
       <el-col
-        :span="8"
+        :span="el_col"
       >
         <el-card
           shadow="hover"
@@ -20,7 +20,7 @@
         </el-card>
       </el-col>
       <el-col
-        :span="8"
+        :span="el_col"
       >
         <el-card
           shadow="hover"
@@ -38,5 +38,26 @@
   </div>
 </template>
   
-  <script setup>
-  </script>
+<script setup>
+  import { defineProps, ref, watchEffect } from 'vue';
+
+  const props = defineProps({
+      isMobile: {
+        type: Boolean,
+        default: false
+      }
+  })
+  const el_gutter = ref(12)
+  const el_col = ref(8)
+
+  watchEffect(() => {
+    if (props.isMobile) {
+      el_gutter.value = 0
+      el_col.value = 24
+    }
+    else {
+      el_gutter.value = 12
+      el_col.value = 8
+    }
+  })
+</script>

@@ -55,6 +55,28 @@
 </script>
   
 <style scoped>
+  @media screen and (max-width: 700px) {
+    .box-card {
+      width: 100% !important;
+
+    }
+    .description-col-title {
+      padding-left: 0%;
+      border-right: 0 !important;
+      display: block;
+      max-width: max-content;
+    }
+    .description-col-content {
+      display: grid;
+      max-width: max-content;
+    }
+    .description-row {
+      display: inherit;
+    }
+    .p {
+      font-size: 14px !important;
+    }
+  }
   .project-title {
     font-weight: bolder;
     font-size: xx-large;

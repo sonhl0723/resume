@@ -6,8 +6,6 @@
     </div>
     <el-backtop
       target=".contents-wrapper"
-      :right="80"
-      :bottom="100"
       :visibility-height="-1"
     />
   </div>
@@ -16,5 +14,5 @@
     
 <script setup>
   import { ElBacktop } from 'element-plus';
-import BaseHeader from '../components/BaseHeader.vue';
+  import BaseHeader from '../components/BaseHeader.vue';
 </script>
