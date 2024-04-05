@@ -18,8 +18,19 @@
       <el-descriptions-item label="출생">
         1998.07
       </el-descriptions-item>
-      <el-descriptions-item label="Github">
-        https://github.com/sonhl0723
+      <el-descriptions-item>
+        <div class="el-descriptions__label">
+          Github <img
+            src="@/assets/img/github_icon.png"
+            style="width: 19px;"
+          >
+        </div>
+        <a
+          href="https://github.com/sonhl0723"
+          target="_blank"
+        >
+          https://github.com/sonhl0723
+        </a>
       </el-descriptions-item>
     </el-descriptions>
   </div>

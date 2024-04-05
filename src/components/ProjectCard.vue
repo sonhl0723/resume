@@ -8,7 +8,7 @@
       style="width: 60%; height: 150px; margin: 0 0 0.5rem 0;"
     />
     <div class="proj_description">
-      <el-text style="font-weight: bolder; font-size: 18px; color: #215015; margin-bottom: 0.5rem">
+      <el-text style="font-weight: bolder; font-size: 18px; color: #215015; margin-bottom: 0.8rem">
         {{ props.info.card_title }}
       </el-text>
       <div
@@ -23,9 +23,6 @@
           {{ t }}
         </el-tag>
       </div>
-      <el-text style="color: #000000; margin-top: 0.7rem;">
-        {{ props.info.card_description }}
-      </el-text>
     </div>
   </el-card>
 </template>
