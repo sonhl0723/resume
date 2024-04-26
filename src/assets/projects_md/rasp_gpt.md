@@ -10,8 +10,8 @@
 
 > [라즈베리파이 스마트 스피커 소스 코드 Github 레포지토리](https://github.com/orgs/RaspGPT/repositories)
 
--   라즈베리파이3 b+ / ChatGPT를 활용한 스마트 스피커 구현
--   오픈 소스(EfficientWord-Net)을 활용한 Hotword Detection 기능 구현
+◉ 라즈베리파이3 b+ / ChatGPT를 활용한 스마트 스피커 구현<br/>
+◉ 오픈 소스(EfficientWord-Net)을 활용한 Hotword Detection 기능 구현
 
 <iframe src="/assets/video/raspgpt.mp4?autoplay=0" height="500px"/>
 
@@ -26,9 +26,9 @@
 
 <br/>
 
-&nbsp;라즈베리파이는 마이크 스트림이 계속 열려있으며 Hotword로 등록된 단어를 인식하면 Hotword 인식 완료 wav 파일 스피커에 송출하며 1.5초 이후 사용자의 입력을 받을 준비가 완료된다.<br/>
-&nbsp;사용자는 5초 동안 질문을 말하고 해당 질문은 Google Cloud의 STT로 텍스트로 변환되며 백엔드 서버를 통해 ChatGPT의 OpenAPI를 호출한다.<br/>
-&nbsp;ChatGPT의 답변을 받으면 Google Cloud의 TTS로 wav 파일로 변환되어 라즈베리파이의 스피커로 송출된다.
+▶ 라즈베리파이는 마이크 스트림이 계속 열려있으며 Hotword로 등록된 단어를 인식하면 Hotword 인식 완료 wav 파일 스피커에 송출하며 1.5초 이후 사용자의 입력을 받을 준비가 완료된다.<br/>
+▶ 사용자는 5초 동안 질문을 말하고 해당 질문은 Google Cloud의 STT로 텍스트로 변환되며 백엔드 서버를 통해 ChatGPT의 OpenAPI를 호출한다.<br/>
+▶ ChatGPT의 답변을 받으면 Google Cloud의 TTS로 wav 파일로 변환되어 라즈베리파이의 스피커로 송출된다.
 
 <br/>
 
@@ -36,8 +36,8 @@
 
 ## OS 및 네트워크 설정
 
-**Ubuntu 20.04** 이미지로 개발 진행<br/>
-OS 설치 후 네트워크 세팅 필요<br/><br/>
+▶ **Ubuntu 20.04** 이미지로 개발 진행<br/>
+▶ OS 설치 후 네트워크 세팅 필요<br/><br/>
 
 [**-라즈베리파이 OS 드라이버 설치 링크-**](https://www.raspberrypi.com/software/)<br/>
 [**-Ubuntu 20.04 LTS 이미지 설치 링크-**](https://releases.ubuntu.com/focal/)
@@ -50,7 +50,7 @@ OS 설치 후 네트워크 세팅 필요<br/><br/>
 
 <br/>
 
--   Python 설치를 위한 라이브러리 설치
+〇 Python 설치를 위한 라이브러리 설치
 
 ```bash
 sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev tar wget vim
@@ -58,7 +58,7 @@ sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev 
 
 <br/>
 
--   Python 3.8.16 설치
+〇 Python 3.8.16 설치
 
 ```bash
 wget https://www.python.org/ftp/python/3.8.16/Python-3.8.16.tgz
@@ -73,7 +73,7 @@ sudo make altinstall
 
 <br/>
 
--   alias 설정
+〇 alias 설정
 
 ```bash
 echo "alias python=/usr/local/bin/python3.8" >> ~/.bashrc
@@ -88,7 +88,7 @@ source ~/.bashrc
 
 ## 라이브러리 설치
 
--   pyaudio (depends on portaudio)
+〇 pyaudio (depends on portaudio)
 
 ```bash
 // pyaudio 설치 시 portaudio.h import 문제 발생
@@ -101,7 +101,7 @@ sudo python3.8 -m pip install pyaudio
 
 <br/>
 
--   tflite (tensorflow lightweight binaries)
+〇 tflite (tensorflow lightweight binaries)
 
 ```bash
 echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
@@ -114,7 +114,7 @@ sudo python3.8 -m pip install tflite-runtime
 
 <br/>
 
--   librosa => OS 64bit 필수
+〇 librosa => OS 64bit 필수
 
 ```bash
 sudo apt-get install libblas-dev python3-scipy
@@ -142,7 +142,7 @@ sudo python3.8 -m pip install librosa==0.8.1
 
 <br/>
 
--   EfficientWord-Net
+〇 EfficientWord-Net
 
 ```bash
 // sudo pip install EfficientWord-Net
@@ -154,7 +154,7 @@ sudo python3.8 -m pip install typer rich
 
 ## Hotword 모델 생성
 
--   Training
+〇 Training
 
 ```bash
 // resnet_50_arc
@@ -233,8 +233,8 @@ while True:
 <br/>
 <br/>
 
-EfficientWord-Net 코드 내부에서 특정 단어를 인식하면 마이크 스트림을 닫아버렸다.<br/>
-개발하려는 스마트 스피커는 출시되어 있는 스마트 스피커와 동일하게 Input을 계속 받도록 설계하기 위해서 해당 코드를 삭제하였다.
+▶ EfficientWord-Net 코드 내부에서 특정 단어를 인식하면 마이크 스트림을 닫아버렸다.<br/>
+▶ 개발하려는 스마트 스피커는 출시되어 있는 스마트 스피커와 동일하게 Input을 계속 받도록 설계하기 위해서 해당 코드를 삭제하였다.
 
 # STT/TTS
 
@@ -242,7 +242,7 @@ EfficientWord-Net 코드 내부에서 특정 단어를 인식하면 마이크 �
 
 ## STT/TTS 설정
 
--   Library 설치
+〇 Library 설치
 
 ```bash
 // tts
