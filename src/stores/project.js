@@ -7,21 +7,21 @@ export const projects = defineStore('projects', {
                 'identifier': 'vehicle-counting',
                 'card_img': '/assets/img/vehicle_counting/system_architecture.png',
                 'card_title': 'FCN-BLA 모델에 기반한 교통량 분석 시스템',
-                'card_tag': ['HTML', 'Javascript', 'Python', 'Express.js', 'Flask'],
+                'card_tag': ['HTML', 'Python', 'Express.js', 'Flask'],
                 'card_view_enable': true
             },
             {
                 'identifier': 'raspgpt',
                 'card_img': '/assets/img/rasp_gpt/flowchart.png',
                 'card_title': 'RaspGPT 스마트 스피커',
-                'card_tag': ['Spring Boot', 'Python', 'Raspberry Pi'],
+                'card_tag': ['Spring Boot', 'Python', 'Ubuntu 20.04'],
                 'card_view_enable': true
             },
             {
                 'identifier': 'smart-army',
                 'card_img': '/assets/img/progress.png',
                 'card_title': '지능형 스마트부대(1-3단계) 시범구축 사업',
-                'card_tag': ['Spring Boot', 'PostgreSQL', 'Vue3'],
+                'card_tag': ['Spring Boot', 'PostgreSQL', 'Vue3', 'Wildfly'],
                 'card_view_enable': true
             }
         ],
@@ -37,14 +37,14 @@ export const projects = defineStore('projects', {
                 '제목': '라즈베리파이 & ChatGPT 스마트 스피커',
                 '기간': '2021.09 ~ 2022.05',
                 '발주처': '토이 프로젝트',
-                '기술 스택': ['Python', 'EfficientWord-Net'],
+                '기술 스택': ['Python', 'EfficientWord-Net', 'ChatGPT OpenAPI'],
                 '역할': 'Backend'
             },
             'smart-army': {
                 '제목': '지능형 스마트부대(1-3단계) 시범구축 사업',
-                '기간': '2021.09 ~ 2022.05',
+                '기간': '2021.10 ~ 2022.05',
                 '발주처': '육군 본부',
-                '기술 스택': ['Spring Boot', 'Netty'],
+                '기술 스택': ['Spring Boot', 'PostgreSQL', 'Spring Security', 'Linux(rocky linux8.9)', 'Wildfly-26.1.3', 'Gitlab', 'Jenkins', 'MyBatis'],
                 '역할': 'Backend, CI/CD'
             }
         }
