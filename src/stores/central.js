@@ -4,7 +4,9 @@ export const data = defineStore('data', {
     state: () => ({
         curr_menu: 'resume'
     }),
-    persist: true,
+    persist: {
+        storage: sessionStorage
+    },
     getters: {
         getCurrMenu: (state) => {
             return state.curr_menu
