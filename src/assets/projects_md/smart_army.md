@@ -33,6 +33,7 @@
 
 ▶ Spring Boot Dependency 레포지토리 관리 (국방망)<br/>
 ▶ 배포 전략 및 파이프라인 구축 및 유지보수<br/>
+▶ wildfly 인스턴스 및 config 관리<br/>
 
 <br/>
 
