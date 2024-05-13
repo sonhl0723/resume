@@ -13,7 +13,7 @@
 ◉ 라즈베리파이3 b+ / ChatGPT를 활용한 스마트 스피커 구현<br/>
 ◉ 오픈 소스(EfficientWord-Net)을 활용한 Hotword Detection 기능 구현
 
-<iframe src="/assets/video/raspgpt.mp4?autoplay=0" height="500px"/>
+<iframe src="/assets/video/raspgpt.mp4?autoplay=0?muted=1" height="500px"></iframe>
 
 # 시스템 구성도
 

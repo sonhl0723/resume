@@ -45,7 +45,6 @@ const ktds = {
 
   ◉ SmartX 솔루션 기반 디지털트윈 대시보드 개발
   ▏Kafka, Spring Boot, Burrow, telegraf, grafana
-  <br/><br/>
    ╺ IoT 플랫폼 카프카 연동 개발
    ╺ IoT 플랫폼 성능 모니터링 구축
    ╺ 디지털트윈 대시보드 개발을 위한 데이터 에뮬레이터 개발
