@@ -34,10 +34,10 @@
         </el-col>
         <el-col :span="12">
           <el-collapse-item
-            title="Middleware"
-            name="Middleware"
+            title="Middleware & Framework"
+            name="Middleware & Framework"
           >
-            <div v-for="item in middlewares">
+            <div v-for="item in middlewares_framework">
               <el-image
                 :src="item"
               />
@@ -77,9 +77,12 @@
       "https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white"
   ]
 
-  const middlewares = [
+  const middlewares_framework = [
     "https://img.shields.io/badge/Jenkins-D24939?style=flat&logo=Jenkins&logoColor=white",
-    "https://img.shields.io/badge/Nexus3-1B1C30?style=flat&logo=Sonatype&logoColor=white"
+    "https://img.shields.io/badge/Nexus3-1B1C30?style=flat&logo=Sonatype&logoColor=white",
+    "https://img.shields.io/badge/Spring Boot-6DB33F?style=flat&logo=springboot&logoColor=white",
+    "https://img.shields.io/badge/Spring Security-6DB33F?style=flat&logo=springsecurity&logoColor=white",
+    "https://img.shields.io/badge/Vue.js 3-4FC08D?style=flat&logo=vuedotjs&logoColor=white"
   ]
 
   const tools = [

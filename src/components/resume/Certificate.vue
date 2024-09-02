@@ -19,7 +19,7 @@
             <el-divider />
             23202120216W
             <el-divider />
-            한국정보과학회
+            한국산업인력공단
           </div>
         </el-card>
       </el-col>
