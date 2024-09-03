@@ -64,7 +64,7 @@
   <script setup>
   import { ref } from 'vue';
 
-  const allActive = ref(["Language", "Database", "Middleware", "Tool"])
+  const allActive = ref(["Language", "Database", "Middleware & Framework", "Tool"])
 
   const languages = [
     "https://img.shields.io/badge/Python-14354C?style=flat&logo=python&logoColor=white",
