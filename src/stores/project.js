@@ -42,7 +42,7 @@ export const projects = defineStore('projects', {
             },
             'smart-army': {
                 '제목': '지능형 스마트부대(1-3단계) 시범구축 사업',
-                '기간': '2021.10 ~ 2022.05(8MM)',
+                '기간': '2023.10 ~ 2024.12(14.5MM)',
                 '발주처': '육군 본부',
                 '기술 스택': ['Spring Boot', 'PostgreSQL', 'Spring Security', 'Linux(rocky linux8.9)', 'Wildfly-26.1.3', 'Gitlab', 'Jenkins', 'MyBatis'],
                 '역할': 'Backend, CI/CD'
